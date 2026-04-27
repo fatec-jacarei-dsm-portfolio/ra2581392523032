@@ -1,11 +1,292 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - ARIANA FERREIRA DOS SANTOS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Ariana Ferreira</title>
+  <meta name="description" content="Portfólio acadêmico e profissional de Ariana Ferreira - Analista de Sustentação e Estudante de DSM na Fatec Jacareí.">
+  
+  <!-- Configurações Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fatec-jacarei-dsm-portfolio.github.io/ra2581392523032/">
+  <meta property="og:title" content="Portfolio | Ariana Ferreira">
+  <meta property="og:description" content="Conheça meus projetos acadêmicos e pessoais desenvolvidos na Fatec Jacareí.">
+  <meta property="og:image" content="assets/foto.jpeg">
+
+  <!-- Configurações Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Portfolio | Ariana Ferreira">
+  <meta property="twitter:description" content="Conheça meus projetos acadêmicos e pessoais desenvolvidos na Fatec Jacareí.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.js"></script>
 </head>
-<body>
-    <h1>Bem vindo ao Portfólio de ARIANA FERREIRA DOS SANTOS</h1>
+<body id="topo">
+  <a href="#sobre" class="skip-link">Pular para o conteúdo principal</a>
+  <div class="page-bg"></div>
+
+  <header class="hero">
+    <nav class="nav" aria-label="Navegação principal">
+      <span class="brand">ARI.</span>
+      <div class="nav-right">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+          <i data-lucide="moon" id="theme-icon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-text">
+        <h1>Olá, sou <span>Ariana</span>.</h1>
+        <p class="intro">
+          Analista de Sustentação e acadêmica de Desenvolvimento de Software Multiplataforma na Fatec Jacareí.
+          Este espaço consolida minha produção técnica, competências e evolução na área tecnológica.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">
+            <i data-lucide="code-2"></i> Ver projetos
+          </a>
+          <a class="button button-secondary" href="#contato">
+            <i data-lucide="message-square"></i> Falar comigo
+          </a>
+        </div>
+        
+        <div class="hero-details">
+          <span><i data-lucide="map-pin"></i> São José dos Campos</span>
+          <span><i data-lucide="check-circle"></i> Qualidade & Desenvolvimento</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-wrapper">
+          <img class="profile-photo" src="assets/foto.jpeg" alt="Foto de Ariana">
+          <div class="experience-badge">
+            <strong>HELLO</strong>
+            <span>WORLD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section about" id="sobre">
+      <div class="section-title">
+        <p>Sobre</p>
+        <h2>Perfil Profissional e Acadêmico.</h2>
+      </div>
+      <div class="about-grid">
+        <article>
+          <p>
+            Sou Ariana, Analista de Sustentação e estudante de Desenvolvimento de Software Multiplataforma na Fatec Jacareí.
+            Tenho interesse em construir soluções organizadas, funcionais e com boa experiência de uso.
+          </p>
+          <p>
+            Meu foco atual está em qualidade, desenvolvimento web e evolução técnica por meio de projetos acadêmicos
+            e práticos publicados no GitHub.
+          </p>
+        </article>
+        <div class="highlight-box">
+          <span>Objetivo</span>
+          <strong>Desenvolver software com clareza, qualidade e evolução constante.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projetos">
+      <div class="section-title">
+        <p>Projetos</p>
+        <h2>Projetos e Experiências.</h2>
+      </div>
+      
+      <div class="project-group">
+        <h3 class="project-group-title">Acadêmicos</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-badge badge-finished">Concluído</span>
+            <h3>AgriRSLAB Portal</h3>
+            <p>Portal desenvolvido pela equipe 404 Not Found para o laboratório AgriRS do INPE. Atuei como desenvolvedora Full-Stack, além de colaborar ativamente na concepção da identidade visual e no design de interface (UI/UX).</p>
+            <a class="project-link" href="https://github.com/404NotFound-ABP/AgriRSLAB_Portal" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub <i data-lucide="external-link"></i>
+            </a>
+          </article>
+          <article class="project-card">
+            <span class="project-badge badge-progress">Em Progresso</span>
+            <h3>Secretaria Acadêmica</h3>
+            <p>Aplicação Web para autoatendimento da secretaria acadêmica da Fatec Jacareí. Atuo como desenvolvedora na equipe, focando na implementação de funcionalidades e na qualidade da experiência do usuário.</p>
+            <a class="project-link" href="https://github.com/arianaferresan/ABP-_2-" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub <i data-lucide="external-link"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-group">
+        <h3 class="project-group-title">Pessoais</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-badge badge-finished">Concluído</span>
+            <h3>Biblioteca Pessoal</h3>
+            <p>Sistema para organização e gerenciamento de livros. Desenvolvido com foco na organização de acervos pessoais e facilidade de consulta.</p>
+            <a class="project-link" href="https://github.com/arianaferresan/biblioteca-pessoal" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub <i data-lucide="external-link"></i>
+            </a>
+          </article>
+          <article class="project-card">
+            <span class="project-badge badge-finished">Concluído</span>
+            <h3>EduFlow</h3>
+            <p>Hub de estudos gamificado com Kanban, roteiros de aprendizado e timer Pomodoro. Focado em centralizar a organização acadêmica de forma visual e intuitiva.</p>
+            <a class="project-link" href="https://github.com/arianaferresan/EduFlow" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub <i data-lucide="external-link"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-group">
+        <h3 class="project-group-title">Profissionais</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-badge badge-upcoming">Em breve</span>
+            <h3>Novos Desafios</h3>
+            <p>Atualmente focada em transição de carreira e evolução técnica através de projetos acadêmicos e práticos. Aberta a oportunidades em Engenharia de Qualidade e Desenvolvimento Web.</p>
+            <a class="project-link" href="#contato">
+              Entre em contato <i data-lucide="message-square"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="habilidades">
+      <div class="section-title">
+        <p>Habilidades</p>
+        <h2>Tecnologias e competências.</h2>
+      </div>
+      <div class="skills-list">
+        <span><i data-lucide="headphones"></i> Suporte e Sustentação</span>
+        <span><i data-lucide="file-code-2"></i> HTML</span>
+        <span><i data-lucide="palette"></i> CSS</span>
+        <span><i data-lucide="layout"></i> UX/UI</span>
+        <span><i data-lucide="braces"></i> JavaScript</span>
+        <span><i data-lucide="shield-check"></i> Qualidade de Software</span>
+        <span><i data-lucide="git-branch"></i> Git</span>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="section-title">
+        <p>Contato</p>
+        <h2>Vamos Conversar?</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="https://www.linkedin.com/in/arianaferreira/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon linkedin"><i data-lucide="linkedin"></i></div>
+          <div class="contact-info">
+            <h3>LinkedIn</h3>
+            <p>Conecte-se profissionalmente</p>
+          </div>
+          <i data-lucide="chevron-right" class="arrow"></i>
+        </a>
+
+        <a href="https://github.com/arianaferresan" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon github"><i data-lucide="github"></i></div>
+          <div class="contact-info">
+            <h3>GitHub</h3>
+            <p>Veja meus repositórios</p>
+          </div>
+          <i data-lucide="chevron-right" class="arrow"></i>
+        </a>
+
+        <a href="mailto:afs3949@gmail.com" class="contact-card">
+          <div class="contact-icon email"><i data-lucide="mail"></i></div>
+          <div class="contact-info">
+            <h3>E-mail</h3>
+            <p>Envie uma mensagem direta</p>
+          </div>
+          <i data-lucide="chevron-right" class="arrow"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Ariana Ferreira. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="back-to-top" href="#topo" aria-label="Voltar ao topo da página">
+    <i data-lucide="arrow-up"></i>
+  </a>
+
+  <script>
+    lucide.createIcons();
+
+    // Lógica de Alternância de Tema (Dark/Light)
+    const htmlElement = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+
+    function updateIcon(theme) {
+      themeToggle.innerHTML = theme === 'dark' 
+        ? '<i data-lucide="moon"></i>' 
+        : '<i data-lucide="sun"></i>';
+      lucide.createIcons();
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    // Lógica do Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const isMenuOpen = navLinks.classList.contains('active');
+      
+      // Atualiza acessibilidade
+      mobileMenuBtn.setAttribute('aria-expanded', isMenuOpen);
+      mobileMenuBtn.setAttribute('aria-label', isMenuOpen ? 'Fechar menu' : 'Abrir menu');
+
+      mobileMenuBtn.innerHTML = isMenuOpen 
+        ? '<i data-lucide="x"></i>' 
+        : '<i data-lucide="menu"></i>';
+      lucide.createIcons();
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
+        mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
+        lucide.createIcons();
+      });
+    });
+  </script>
 </body>
 </html>
