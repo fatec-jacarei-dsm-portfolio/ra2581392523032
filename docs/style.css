@@ -313,23 +313,40 @@ body {
 
 .project-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
 
-.project-techs {
+.project-technologies {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-technologies strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.project-technologies ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  list-style: none;
 }
 
-.project-techs span {
+.project-technologies li {
+  display: inline-flex;
+  align-items: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent-dark);
   font-size: 0.75rem;
   font-weight: 800;
+  line-height: 1;
 }
 
-[data-theme="dark"] .project-techs span {
+[data-theme="dark"] .project-technologies li {
   color: #ddd6fe;
 }
 
