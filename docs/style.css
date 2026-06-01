@@ -327,16 +327,16 @@ body {
   font-weight: 800;
 }
 
-.project-technologies ul {
+.technology-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  list-style: none;
 }
 
-.project-technologies li {
+.technology-tags span {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   background: var(--accent-soft);
@@ -346,7 +346,7 @@ body {
   line-height: 1;
 }
 
-[data-theme="dark"] .project-technologies li {
+[data-theme="dark"] .technology-tags span {
   color: #ddd6fe;
 }
 
