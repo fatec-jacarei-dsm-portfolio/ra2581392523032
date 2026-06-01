@@ -1,22 +1,11 @@
-# Portfólio - Ariana Ferreira dos Santos
+# Portfólio de Projetos - Fatec Jacareí
 
-Apresentação dos meus projetos, competências e canais de contato.
+### Aluno: ARIANA FERREIRA DOS SANTOS  
+###Curso: Desenvolvimento de Software Multiplataforma  
+Turma: 2° Semestre de 2025
 
-## 🔗 Acessar Portfólio
-[Clique aqui para visualizar](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392523032/)
+## Portfólio Online
 
-## 🎥 Vídeo de Apresentação do Portfólio
-[Assistir vídeo](https://centropaulasouza-my.sharepoint.com/:v:/g/personal/ariana_santos_aluno_cps_sp_gov_br/IQDeTUxAVpyHT6gKxy33f7GqARqzAvcUsLdlry3ZVDDL4Rk?e=k6YF3n&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392523032/)
 
----
-
-### Projetos Principais:
-- **AgriRSLAB Portal** (Desenvolvimento Full-Stack / UI Design)
-- **Secretaria Acadêmica** (Desenvolvimento Web na Fatec Jacareí)
-
-### Tecnologias:
-- HTML, CSS e JavaScript
-- UX/UI Design & Acessibilidade
-
----
-Estudante de DSM na **Fatec Jacareí**.
+## 🎥 [Vídeo de Apresentação](https://centropaulasouza-my.sharepoint.com/:v:/g/personal/ariana_santos_aluno_cps_sp_gov_br/IQDeTUxAVpyHT6gKxy33f7GqARqzAvcUsLdlry3ZVDDL4Rk?e=k6YF3n&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
