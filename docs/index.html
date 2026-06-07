@@ -18,11 +18,7 @@
   <meta property="twitter:title" content="Portfólio | Ariana Ferreira">
   <meta property="twitter:description" content="Conheça meus projetos acadêmicos e pessoais desenvolvidos na Fatec Jacareí.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.js"></script>
 </head>
 <body id="topo">
   <a href="#sobre" class="skip-link">Pular para o conteúdo principal</a>
@@ -33,7 +29,7 @@
       <span class="brand">ARI.</span>
       <div class="nav-right">
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
-          <i data-lucide="menu"></i>
+          <span class="icon icon-menu" aria-hidden="true"></span>
         </button>
         <ul class="nav-links" id="nav-links">
           <li><a href="#sobre">Sobre</a></li>
@@ -42,7 +38,7 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
         <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-          <i data-lucide="moon" id="theme-icon"></i>
+          <span class="icon icon-moon" id="theme-icon" aria-hidden="true"></span>
         </button>
       </div>
     </nav>
@@ -56,16 +52,16 @@
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projetos">
-            <i data-lucide="code-2"></i> Ver projetos
+            <span class="icon icon-code" aria-hidden="true"></span> Ver projetos
           </a>
           <a class="button button-secondary" href="#contato">
-            <i data-lucide="message-square"></i> Falar comigo
+            <span class="icon icon-message" aria-hidden="true"></span> Falar comigo
           </a>
         </div>
         
         <div class="hero-details">
-          <span><i data-lucide="map-pin"></i> São José dos Campos</span>
-          <span><i data-lucide="check-circle"></i> Qualidade & Desenvolvimento</span>
+          <span><span class="icon icon-pin" aria-hidden="true"></span> São José dos Campos</span>
+          <span><span class="icon icon-check" aria-hidden="true"></span> Qualidade & Desenvolvimento</span>
         </div>
       </div>
 
@@ -117,7 +113,9 @@
           <article class="project-card">
             <span class="project-badge badge-finished">Concluído</span>
             <h3>AgriRSLAB Portal</h3>
-            <p>Portal desenvolvido pela equipe 404 Not Found para o laboratório AgriRS do INPE. Atuei como desenvolvedora Full-Stack, além de colaborar ativamente na concepção da identidade visual e no design de interface (UI/UX).</p>
+            <p>Portal desenvolvido pela equipe 404 Not Found para o laboratório AgriRS do INPE.</p>
+            <p><strong>Contribuição:</strong> Atuei no desenvolvimento Full-Stack do portal, contribuindo para a implementação das funcionalidades, organização da interface e integração das entregas da equipe. Também participei da concepção da identidade visual e das decisões de UI/UX, buscando uma experiência clara, acessível e alinhada ao objetivo do laboratório.</p>
+            <p><strong>Semestre:</strong> 1DSM - 2º Sem. 2025</p>
             <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
               <strong>Tecnologias:</strong>
               <div class="technology-tags">
@@ -130,12 +128,14 @@
             <a class="project-link" href="https://github.com/404NotFound-ABP/AgriRSLAB_Portal" target="_blank" rel="noopener noreferrer">
               Ver no GitHub
             </a>
-            <i data-lucide="chevron-right" class="arrow"></i>
+            <span class="arrow" aria-hidden="true">></span>
           </article>
           <article class="project-card">
             <span class="project-badge badge-progress">Em Progresso</span>
             <h3>Secretaria Acadêmica</h3>
-            <p>Aplicação Web para autoatendimento da secretaria acadêmica da Fatec Jacareí. Atuo como desenvolvedora na equipe, focando na implementação de funcionalidades e na qualidade da experiência do usuário.</p>
+            <p>Aplicação Web para autoatendimento da secretaria acadêmica da Fatec Jacareí.</p>
+            <p><strong>Contribuição:</strong> Minha atuação foi focada na engenharia de software e na documentação técnica do projeto, estruturando requisitos, casos de uso, diagramas de classe e diagramas de sequência para apoiar o desenvolvimento da solução. Também contribui nas decisões de UI/UX, propondo melhorias na navegação, organização visual e experiência do usuário.</p>
+            <p><strong>Semestre:</strong> 2DSM - 1º Sem. 2026</p>
             <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
               <strong>Tecnologias:</strong>
               <div class="technology-tags">
@@ -148,7 +148,7 @@
             <a class="project-link" href="https://github.com/arianaferresan/ABP-_2-" target="_blank" rel="noopener noreferrer">
               Ver no GitHub
             </a>
-            <i data-lucide="chevron-right" class="arrow"></i>
+            <span class="arrow" aria-hidden="true">></span>
           </article>
         </div>
       </div>
@@ -160,35 +160,47 @@
             <span class="project-badge badge-finished">Concluído</span>
             <h3>Biblioteca Pessoal</h3>
             <p>Sistema para organização e gerenciamento de livros. Desenvolvido com foco na organização de acervos pessoais e facilidade de consulta.</p>
+            <p><strong>Contribuição:</strong> Desenvolvi a estrutura do sistema, organização das informações dos livros e interface de consulta.</p>
+            <p><strong>Semestre:</strong> Projeto pessoal - 2026</p>
+            <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
+              <strong>Tecnologias:</strong>
+              <div class="technology-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
             <a class="project-link" href="https://github.com/arianaferresan/biblioteca-pessoal" target="_blank" rel="noopener noreferrer">
               Ver no GitHub
             </a>
-            <i data-lucide="chevron-right" class="arrow"></i>
+            <span class="arrow" aria-hidden="true">></span>
           </article>
           <article class="project-card">
             <span class="project-badge badge-finished">Concluído</span>
             <h3>EduFlow</h3>
             <p>Hub de estudos gamificado com Kanban, roteiros de aprendizado e timer Pomodoro. Focado em centralizar a organização acadêmica de forma visual e intuitiva.</p>
+            <p><strong>Contribuição:</strong> Desenvolvi a proposta do hub, os fluxos de organização de estudos e a interface das principais funcionalidades.</p>
+            <p><strong>Semestre:</strong> Projeto pessoal - 2026</p>
+            <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
+              <strong>Tecnologias:</strong>
+              <div class="technology-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
             <a class="project-link" href="https://github.com/arianaferresan/EduFlow" target="_blank" rel="noopener noreferrer">
               Ver no GitHub
             </a>
-            <i data-lucide="chevron-right" class="arrow"></i>
+            <span class="arrow" aria-hidden="true">></span>
           </article>
         </div>
       </div>
 
       <div class="project-group">
         <h3 class="project-group-title">Profissionais</h3>
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-badge badge-upcoming">Em breve</span>
-            <h3>Novos Desafios</h3>
-            <p>Atualmente focada em transição de carreira e evolução técnica através de projetos acadêmicos e práticos. Aberta a oportunidades em Engenharia de Qualidade e Desenvolvimento Web.</p>
-            <a class="project-link" href="#contato">
-              Entre em contato
-            </a>
-            <i data-lucide="chevron-right" class="arrow"></i>
-          </article>
+        <div class="project-note">
+          <p>Atualmente não possuo projetos profissionais públicos com repositório disponível. Minha experiência profissional está concentrada em sustentação de sistemas, qualidade e atendimento técnico.</p>
         </div>
       </div>
     </section>
@@ -199,13 +211,13 @@
         <h2>Tecnologias e competências.</h2>
       </div>
       <div class="skills-list">
-        <span><i data-lucide="headphones"></i> Suporte e Sustentação</span>
-        <span><i data-lucide="file-code-2"></i> HTML</span>
-        <span><i data-lucide="palette"></i> CSS</span>
-        <span><i data-lucide="layout"></i> UX/UI</span>
-        <span><i data-lucide="braces"></i> JavaScript</span>
-        <span><i data-lucide="shield-check"></i> Qualidade de Software</span>
-        <span><i data-lucide="git-branch"></i> Git</span>
+        <span><span class="icon icon-support" aria-hidden="true"></span> Suporte e Sustentação</span>
+        <span><span class="icon icon-html" aria-hidden="true"></span> HTML</span>
+        <span><span class="icon icon-css" aria-hidden="true"></span> CSS</span>
+        <span><span class="icon icon-layout" aria-hidden="true"></span> UX/UI</span>
+        <span><span class="icon icon-js" aria-hidden="true"></span> JavaScript</span>
+        <span><span class="icon icon-quality" aria-hidden="true"></span> Qualidade de Software</span>
+        <span><span class="icon icon-git" aria-hidden="true"></span> Git</span>
       </div>
     </section>
 
@@ -216,21 +228,21 @@
       </div>
       <div class="contact-grid">
         <a href="https://www.linkedin.com/in/arianaferreira/" target="_blank" rel="noopener noreferrer" class="contact-card">
-          <div class="contact-icon linkedin"><i data-lucide="linkedin"></i></div>
+          <div class="contact-icon linkedin"><span class="icon icon-linkedin" aria-hidden="true"></span></div>
           <div class="contact-info">
             <h3>LinkedIn</h3>
             <p>Conecte-se comigo.</p>
           </div>
-          <i data-lucide="chevron-right" class="arrow"></i>
+          <span class="arrow" aria-hidden="true">></span>
         </a>
 
         <a href="https://github.com/arianaferresan" target="_blank" rel="noopener noreferrer" class="contact-card">
-          <div class="contact-icon github"><i data-lucide="github"></i></div>
+          <div class="contact-icon github"><span class="icon icon-github" aria-hidden="true"></span></div>
           <div class="contact-info">
             <h3>GitHub</h3>
             <p>Veja meus repositórios.</p>
           </div>
-          <i data-lucide="chevron-right" class="arrow"></i>
+          <span class="arrow" aria-hidden="true">></span>
         </a>
       </div>
     </section>
@@ -243,21 +255,17 @@
   </footer>
 
   <a class="back-to-top" href="#topo" aria-label="Voltar ao topo da página">
-    <i data-lucide="arrow-up"></i>
+    <span aria-hidden="true">^</span>
   </a>
 
   <script>
-    lucide.createIcons();
-
     //  Alternância de Tema (Dark/Light)
     const htmlElement = document.documentElement;
     const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
 
     function updateIcon(theme) {
-      themeToggle.innerHTML = theme === 'dark' 
-        ? '<i data-lucide="moon"></i>' 
-        : '<i data-lucide="sun"></i>';
-      lucide.createIcons();
+      themeIcon.className = theme === 'dark' ? 'icon icon-moon' : 'icon icon-sun';
     }
 
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -285,10 +293,7 @@
       mobileMenuBtn.setAttribute('aria-expanded', isMenuOpen);
       mobileMenuBtn.setAttribute('aria-label', isMenuOpen ? 'Fechar menu' : 'Abrir menu');
 
-      mobileMenuBtn.innerHTML = isMenuOpen 
-        ? '<i data-lucide="x"></i>' 
-        : '<i data-lucide="menu"></i>';
-      lucide.createIcons();
+      mobileMenuBtn.querySelector('.icon').className = isMenuOpen ? 'icon icon-close' : 'icon icon-menu';
     });
 
     // Fecha o menu ao clicar em qualquer link
@@ -297,8 +302,7 @@
         navLinks.classList.remove('active');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
         mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
-        mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
-        lucide.createIcons();
+        mobileMenuBtn.querySelector('.icon').className = 'icon icon-menu';
       });
     });
   </script>
