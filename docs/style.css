@@ -155,41 +155,11 @@ body {
   width: 1rem;
   height: 1rem;
   color: currentColor;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.icon::before {
-  display: block;
-}
-
-.icon-menu::before { content: "≡"; font-size: 1.35rem; }
-.icon-close::before { content: "×"; font-size: 1.25rem; }
-.icon-moon::before { content: "◐"; }
-.icon-sun::before { content: "☼"; }
-.icon-code::before { content: "</>"; font-size: 0.72rem; }
-.icon-message::before { content: "..."; font-size: 0.9rem; }
-.icon-pin::before { content: "•"; font-size: 1.25rem; }
-.icon-check::before { content: "✓"; }
-.icon-support::before { content: "?"; }
-.icon-html::before { content: "H"; }
-.icon-css::before { content: "C"; }
-.icon-layout::before { content: "U"; }
-.icon-js::before { content: "JS"; font-size: 0.68rem; }
-.icon-quality::before { content: "✓"; }
-.icon-git::before { content: "G"; }
-.icon-linkedin::before { content: "in"; font-size: 0.75rem; }
-.icon-github::before { content: "GH"; font-size: 0.72rem; }
-
-.icon {
-  width: 1.05rem;
-  height: 1.05rem;
-  flex: 0 0 1.05rem;
-  font-weight: 400;
 }
 
 .icon::before {
   content: "";
+  display: block;
   width: 100%;
   height: 100%;
   background: currentColor;
@@ -214,6 +184,18 @@ body {
 .icon-git { --icon-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M22 10.8 13.2 2a1.7 1.7 0 0 0-2.4 0L9 3.8l2.3 2.3a2.1 2.1 0 0 1 2.6 2.6l2.2 2.2a2.1 2.1 0 1 1-1.2 1.2l-2.1-2.1v5.2a2.1 2.1 0 1 1-1.7 0V9.8a2.1 2.1 0 0 1-.9-2.5L7.7 5 2 10.8a1.7 1.7 0 0 0 0 2.4l8.8 8.8a1.7 1.7 0 0 0 2.4 0l8.8-8.8a1.7 1.7 0 0 0 0-2.4Z'/%3E%3C/svg%3E"); }
 .icon-linkedin { --icon-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M5.4 8.7H2.8V21h2.6V8.7ZM5.7 5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Zm8.6 8.6c0-1.3.6-2.1 1.8-2.1 1.1 0 1.6.8 1.6 2.1V21h2.6v-7.7c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.7H10V21h2.6v-6.8c0-.3 0-.6.1-.9.3-.7.8-1.4 1.8-1.4Z'/%3E%3C/svg%3E"); }
 .icon-github { --icon-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1.1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.7 9.7 0 0 1 5.1 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7.7.7 1.1 1.6 1.1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.8 1 .8 2V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z'/%3E%3C/svg%3E"); }
+
+/* Adiciona um fundo padrão para cards sem imagem */
+.project-card:not(:has(.project-image))::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--accent);
+  opacity: 0.6;
+}
 
 /* Seção Hero */
 .hero-content {
@@ -346,6 +328,25 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow: hidden;
+}
+
+.project-image {
+  margin: -2.2rem -1.8rem 1.5rem -1.8rem;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
 }
 
 .project-card:hover {
@@ -353,22 +354,69 @@ body {
   border-color: var(--accent);
 }
 
-.project-badge {
+.project-badges {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.project-badge {
   padding: 0.35rem 0.7rem;
   border-radius: 6px;
   font-size: 0.65rem;
   font-weight: 800;
-  z-index: 2;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.badge-finished { background: #ecfdf5; color: #047857; }
+.badge-winner {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fcd34d;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+  animation: pulse-gold 3s infinite;
+}
+
+@keyframes pulse-gold {
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+.badge-winner .icon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+[data-theme="dark"] .badge-winner {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.badge-finished { 
+  background: #ecfdf5; 
+  color: #047857;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
 .badge-progress { background: #fffbeb; color: #b45309; }
 .badge-upcoming { background: #f9fafb; color: #4b5563; }
 
-[data-theme="dark"] .badge-finished { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+[data-theme="dark"] .badge-finished { 
+  background: rgba(16, 185, 129, 0.15); 
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
 [data-theme="dark"] .badge-progress { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
 [data-theme="dark"] .badge-upcoming { background: rgba(156, 163, 175, 0.15); color: #d1d5db; }
 

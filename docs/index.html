@@ -17,8 +17,18 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Portfólio | Ariana Ferreira">
   <meta property="twitter:description" content="Conheça meus projetos acadêmicos e pessoais desenvolvidos na Fatec Jacareí.">
+  <meta name="theme-color" content="#0d0b14">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/Foto_Pro_Linkedin.PNG" type="image/x-icon">
+
+  <script>
+    // Inicialização imediata do tema para evitar flickering
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body id="topo">
   <a href="#sobre" class="skip-link">Pular para o conteúdo principal</a>
@@ -111,10 +121,16 @@
         <h3 class="project-group-title">Acadêmicos</h3>
         <div class="project-grid">
           <article class="project-card">
-            <span class="project-badge badge-finished">Concluído</span>
+            <div class="project-image">
+              <img src="assets/agrirslab.PNG" alt="Captura de tela do Portal AgriRSLAB">
+            </div>
+            <div class="project-badges">
+              <span class="project-badge badge-winner"><span class="icon icon-award" aria-hidden="true"></span> Escolhido pelo Cliente</span>
+              <span class="project-badge badge-finished">Concluído</span>
+            </div>
             <h3>AgriRSLAB Portal</h3>
             <p>Portal desenvolvido pela equipe 404 Not Found para o laboratório AgriRS do INPE.</p>
-            <p><strong>Contribuição:</strong> Atuei no desenvolvimento Full-Stack do portal, contribuindo para a implementação das funcionalidades, organização da interface e integração das entregas da equipe. Também participei da concepção da identidade visual e das decisões de UI/UX, buscando uma experiência clara, acessível e alinhada ao objetivo do laboratório.</p>
+            <p><strong>Contribuição:</strong> Atuei no desenvolvimento do portal, contribuindo para a implementação das funcionalidades, organização da interface e definição da experiência visual do projeto.</p>
             <p><strong>Semestre:</strong> 1DSM - 2º Sem. 2025</p>
             <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
               <strong>Tecnologias:</strong>
@@ -131,10 +147,16 @@
             <span class="arrow" aria-hidden="true">></span>
           </article>
           <article class="project-card">
-            <span class="project-badge badge-progress">Em Progresso</span>
-            <h3>Secretaria Acadêmica</h3>
+            <div class="project-image">
+              <img src="assets/faqtec.jpeg" alt="Captura de tela do FAQTEC">
+            </div>
+            <div class="project-badges">
+              <span class="project-badge badge-winner"><span class="icon icon-award" aria-hidden="true"></span> Escolhido pelo Cliente</span>
+              <span class="project-badge badge-finished">Concluído</span>
+            </div>
+            <h3>Secretaria Acadêmica - FAQTEC</h3>
             <p>Aplicação Web para autoatendimento da secretaria acadêmica da Fatec Jacareí.</p>
-            <p><strong>Contribuição:</strong> Minha atuação foi focada na engenharia de software e na documentação técnica do projeto, estruturando requisitos, casos de uso, diagramas de classe e diagramas de sequência para apoiar o desenvolvimento da solução. Também contribui nas decisões de UI/UX, propondo melhorias na navegação, organização visual e experiência do usuário.</p>
+            <p><strong>Contribuição:</strong> Atuei na engenharia de software do projeto e no desenvolvimento frontend, contribuindo para a estruturação da solução e para a construção das interfaces administrativas.</p>
             <p><strong>Semestre:</strong> 2DSM - 1º Sem. 2026</p>
             <div class="project-technologies" aria-label="Tecnologias utilizadas no projeto">
               <strong>Tecnologias:</strong>
@@ -157,7 +179,12 @@
         <h3 class="project-group-title">Pessoais</h3>
         <div class="project-grid">
           <article class="project-card">
-            <span class="project-badge badge-finished">Concluído</span>
+            <div class="project-image">
+              <img src="assets/biblioteca.PNG" alt="Captura de tela do projeto Biblioteca Pessoal">
+            </div>
+            <div class="project-badges">
+              <span class="project-badge badge-finished">Concluído</span>
+            </div>
             <h3>Biblioteca Pessoal</h3>
             <p>Sistema para organização e gerenciamento de livros. Desenvolvido com foco na organização de acervos pessoais e facilidade de consulta.</p>
             <p><strong>Contribuição:</strong> Desenvolvi a estrutura do sistema, organização das informações dos livros e interface de consulta.</p>
@@ -176,7 +203,12 @@
             <span class="arrow" aria-hidden="true">></span>
           </article>
           <article class="project-card">
-            <span class="project-badge badge-finished">Concluído</span>
+            <div class="project-image">
+              <img src="assets/eduflow.PNG" alt="Captura de tela do projeto EduFlow">
+            </div>
+            <div class="project-badges">
+              <span class="project-badge badge-finished">Concluído</span>
+            </div>
             <h3>EduFlow</h3>
             <p>Hub de estudos gamificado com Kanban, roteiros de aprendizado e timer Pomodoro. Focado em centralizar a organização acadêmica de forma visual e intuitiva.</p>
             <p><strong>Contribuição:</strong> Desenvolvi a proposta do hub, os fluxos de organização de estudos e a interface das principais funcionalidades.</p>
@@ -269,8 +301,15 @@
     }
 
     const savedTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', savedTheme);
     updateIcon(savedTheme);
+
+    function updateThemeColor(theme) {
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', theme === 'dark' ? '#0d0b14' : '#f8f7ff');
+      }
+    }
+    updateThemeColor(savedTheme);
 
     themeToggle.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
@@ -279,6 +318,7 @@
       htmlElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       updateIcon(newTheme);
+      updateThemeColor(newTheme);
     });
 
     // Menu Mobile
